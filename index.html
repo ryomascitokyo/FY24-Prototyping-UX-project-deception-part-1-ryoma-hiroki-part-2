@@ -1,126 +1,169 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <title>ホテル予約サイト</title>
     <link rel="stylesheet" href="index.css" type="text/css">
+    
 </head>
-
 <body>
+    
     <h1>ホテル予約</h1>
-    <label for="uiSwitch">UIバージョンを切り替え:</label>
-    <input type="checkbox" id="uiSwitch" name="uiSwitch">
-
+    
+    
     <img src="hotel.jpg" alt="ホテルのイメージ" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
-    <div id="fairUI">
-        <form id="reservationForm">
-            <fieldset>
-                <legend>支店とグレードを選択</legend>
-                <p>予約はここから：</p>
-                <label for="place">ホテルの支店</label>
-                <select id="place" name="branch" required>
-                    <option value="">支店を選択してください</option>
-                    <option value="Tokyo">東京本店</option>
-                    <option value="Nagoya">名古屋支店</option>
-                    <option value="Sapporo">札幌支店</option>
-                    <option value="Osaka">大阪支店</option>
-                    <option value="Fukuoka">福岡支店</option>
-                </select>
-                <p id="gradeSelection" style="display: none;">
-                    <label for="grade">ホテルのグレード</label>
-                    <select id="grade" name="grade" required>
-                        <option value="">グレードを選択してください</option>
-                    </select>
-                </p>
-            </fieldset>
-            <fieldset>
-                <legend>お客様情報</legend>
-                <p>
-                    <label for="pname">名前：</label>
-                    <input type="text" id="pname" name="pname" required>
-                </p>
-                <p>
-                    <label for="paddress">住所：</label>
-                    <input type="text" id="paddress" name="paddress" size="36" required>
-                </p>
-                <p>
-                    <label for="pphone">電話番号：</label>
-                    <input type="tel" id="pphone" name="pphone" required>
-                </p>
-                <p>
-                    <label for="pemail">メールアドレス：</label>
-                    <input type="email" id="pemail" name="pemail" required>
-                </p>
-                <p>
-                    <label for="checkin-date">チェックイン日：</label>
-                    <input type="date" id="checkin-date" name="checkin-date" required>
-                </p>
-                <p>
-                    <label for="checkout-date">チェックアウト日：</label>
-                    <input type="date" id="checkout-date" name="checkout-date" required>
-                </p>
-                <p>
-                    <input type="submit" value="予約確定">
-                </p>
-            </fieldset>
-        </form>
-    </div>
-    <div id="deceptiveUI" style="display: none;">
-        <form id="reservationFormDeceptive">
-            <fieldset>
-                <legend>支店とグレードを選択</legend>
-                <p>予約はここから：</p>
-                <label for="placeDeceptive">ホテルの支店</label>
-                <select id="placeDeceptive" name="branch" required>
-                    <option value="">支店を選択してください</option>
-                    <option value="Tokyo">東京本店</option>
-                    <option value="Nagoya">名古屋支店</option>
-                    <option value="Sapporo">札幌支店</option>
-                    <option value="Osaka">大阪支店</option>
-                    <option value="Fukuoka">福岡支店</option>
-                </select>
-                <p id="gradeSelectionDeceptive" style="display: none;">
-                    <label for="gradeDeceptive">ホテルのグレード</label>
-                    <select id="gradeDeceptive" name="grade" required>
-                        <option value="">グレードを選択してください</option>
-                    </select>
-                </p>
-            </fieldset>
-            <fieldset>
-                <legend>お客様情報</legend>
-                <p>
-                    <label for="pnameDeceptive">名前：</label>
-                    <input type="text" id="pnameDeceptive" name="pname" required>
-                </p>
-                <p>
-                    <label for="paddressDeceptive">住所：</label>
-                    <input type="text" id="paddressDeceptive" name="paddress" size="36" required>
-                </p>
-                <p>
-                    <label for="pphoneDeceptive">電話番号：</label>
-                    <input type="tel" id="pphoneDeceptive" name="pphone" required>
-                </p>
-                <p>
-                    <label for="pemailDeceptive">メールアドレス：</label>
-                    <input type="email" id="pemailDeceptive" name="pemail" required>
-                </p>
-                <p>
-                    <label for="checkin-dateDeceptive">チェックイン日：</label>
-                    <input type="date" id="checkin-dateDeceptive" name="checkin-date" required>
-                </p>
-                <p>
-                    <label for="checkout-dateDeceptive">チェックアウト日：</label>
-                    <input type="date" id="checkout-dateDeceptive" name="checkout-date" required>
-                </p>
-                <p>
-                    <input type="submit" value="予約確定">
-                </p>
-            </fieldset>
-            <p id="hiddenFee" style="font-size: 0.7em; color: red; display: none;">※サービス料は20%となっております。</p>
-        </form>
-    </div>
-    <script src="script.js"></script>
-</body>
 
+    <form id="reservationForm">
+        <fieldset>
+            <legend>支店とグレードを選択</legend>
+            <p>予約はここから：</p>
+            <label for="place">ホテルの支店</label>
+            <select id="place" name="branch" required>
+                <option value="">支店を選択してください</option>
+                <option value="Tokyo">東京本店</option>
+                <option value="Nagoya">名古屋支店</option>
+                <option value="Sapporo">札幌支店</option>
+                <option value="Osaka">大阪支店</option>
+                <option value="Fukuoka">福岡支店</option>
+            </select>
+            
+            <p id="gradeSelection" style="display: none;">
+                <label for="grade">ホテルのグレード</label>
+                <select id="grade" name="grade" required>
+                    <option value="">グレードを選択してください</option>
+                </select>
+            </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>お客様情報</legend>
+            <p>
+                <label for="pname">名前：</label>
+                <input type="text" id="pname" name="pname" required>
+            </p>
+            <p>
+                <label for="paddress">住所：</label>
+                <input type="text" id="paddress" name="paddress" size="36" required>
+            </p>
+            <p>
+                <label for="pphone">電話番号：</label>
+                <input type="tel" id="pphone" name="pphone" required>
+            </p>
+            <p>
+                <label for="pemail">メールアドレス：</label>
+                <input type="email" id="pemail" name="pemail" required>
+            </p>
+            
+            <p>
+                <label for="checkin-date">チェックイン日：</label>
+                <input type="date" id="checkin-date" name="checkin-date" required>
+            </p>
+            <p>
+                <label for="checkout-date">チェックアウト日：</label>
+                <input type="date" id="checkout-date" name="checkout-date" required>
+            </p>
+            <p>
+                <input type="submit" value="予約確定">
+            </p>
+        </fieldset>
+    </form>
+    
+    <p id="attention">これで最終決定となります。</p>
+    <p style="font-size: 0.7em; color: rgb(50, 43, 43); opacity: 0.6; text-align: right; margin-right: 10px;">※サービス料は10%となっております。</p>
+    
+    <script>
+        const gradeSelection = document.getElementById("gradeSelection");
+        const gradeSelect = document.getElementById("grade");
+
+        
+        const serviceFeeRate = 0.10;
+
+        
+        const branchGrades = {
+            Tokyo: [
+                { grade: "エコノミー", price: 10000 },
+                { grade: "ビジネス", price: 15000 },
+                { grade: "ラグジュアリー", price: 25000 }
+            ],
+            Nagoya: [
+                { grade: "エコノミー", price: 9000 },
+                { grade: "ビジネス", price: 14000 },
+                { grade: "ラグジュアリー", price: 24000 }
+            ],
+            Sapporo: [
+                { grade: "エコノミー", price: 8000 },
+                { grade: "ビジネス", price: 13000 },
+                { grade: "ラグジュアリー", price: 23000 }
+            ],
+            Osaka: [
+                { grade: "エコノミー", price: 11000 },
+                { grade: "ビジネス", price: 16000 },
+                { grade: "ラグジュアリー", price: 26000 }
+            ],
+            Fukuoka: [
+                { grade: "エコノミー", price: 9500 },
+                { grade: "ビジネス", price: 14500 },
+                { grade: "ラグジュアリー", price: 24500 }
+            ]
+        };
+
+       
+        document.getElementById("place").addEventListener("change", function() {
+            const selectedBranch = this.value;
+            
+            
+            gradeSelect.innerHTML = '';
+
+            
+            if (branchGrades[selectedBranch]) {
+                branchGrades[selectedBranch].forEach(option => {
+                    const gradeOption = document.createElement("option");
+                    gradeOption.value = option.price; 
+                    gradeOption.textContent = `${option.grade} - ¥${option.price.toLocaleString()}`;
+                    gradeSelect.appendChild(gradeOption);
+                });
+
+                
+                const businessOption = Array.from(gradeSelect.options).find(option => option.textContent.includes("ビジネス"));
+                if (businessOption) {
+                    businessOption.selected = true;
+                }
+
+                gradeSelection.style.display = "block"; 
+            } else {
+                gradeSelection.style.display = "none"; 
+            }
+        });
+
+        
+        document.getElementById("reservationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const basePrice = parseInt(gradeSelect.value);
+            const checkinDate = new Date(document.getElementById("checkin-date").value);
+            const checkoutDate = new Date(document.getElementById("checkout-date").value);
+
+            
+            if (isNaN(basePrice) || isNaN(checkinDate) || isNaN(checkoutDate) || checkinDate >= checkoutDate) {
+                alert("正しい支店、グレード、チェックイン日、チェックアウト日を選択してください。");
+                return;
+            }
+
+            
+            const nights = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
+
+           
+            const totalCost = basePrice * nights;
+            const serviceFee = totalCost * serviceFeeRate;
+            const totalPrice = totalCost + serviceFee;
+
+           
+            alert(`ご予約ありがとうございます！\n` +
+                  `宿泊日数: ${nights}泊\n` +
+                  `基本料金 (1泊あたり): ¥${basePrice.toLocaleString()}\n` +
+                  `宿泊料金合計: ¥${totalCost.toLocaleString()}\n` +
+                  `サービス料込みの合計金額: ¥${totalPrice.toLocaleString()}`);
+        });
+    </script>
+</body>
 </html>

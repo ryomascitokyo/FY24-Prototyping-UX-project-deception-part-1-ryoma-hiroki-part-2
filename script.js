@@ -96,7 +96,7 @@ document.getElementById("reservationForm").addEventListener("submit", function (
 
     const nights = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
     const totalCost = basePrice * nights;
-    const serviceFee = totalCost * 0.10; // 10% service fee for fair UI
+    const serviceFee = totalCost * 0.00; // No service fee for fair UI
     const totalPrice = totalCost + serviceFee;
 
     alert(`ご予約ありがとうございます！\n` +
@@ -120,7 +120,7 @@ document.getElementById("reservationFormDeceptive").addEventListener("submit", f
 
     const nights = (checkoutDate - checkinDate) / (1000 * 60 * 60 * 24);
     const totalCost = basePrice * nights;
-    const serviceFee = totalCost * 0.20; // 20% service fee for deceptive UI
+    const serviceFee = totalCost * 0.10; // 10% service fee for deceptive UI
     const totalPrice = totalCost + serviceFee;
 
     alert(`ご予約ありがとうございます！\n` +
